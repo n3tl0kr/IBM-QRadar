@@ -7,7 +7,7 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
 3. Once completed, ensure to deploy changes.
 
 |Parameter | Value |
-| ----- | ----- | |
+| ----- | ----- |
 |Name | <name> @ <IP Address>|
 |Description | Self explanatory|
 |Enabled | Yes|

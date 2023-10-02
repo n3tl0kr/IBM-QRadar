@@ -6,36 +6,36 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
 2. Select Add Log Source and configure a new source with the following parameters.
 3. Once completed, ensure to deploy changes.
 
-|Parameter | Value |
-| ----- | ----- |
-|Name | <name> @ <IP Address>|
-|Description | Self explanatory|
-|Enabled | Yes|
-|Log Source Type | McAfee ePolicy Orchestrator|
-|Protocol Type | TLS Syslog|
-|Groups | <define groups> |
-|Extension | |
-|Target Event Collector | <Local event collector>|
-|Disconnected Log Collector | |
-|Credibility | 5|
-|Internal | No|
-|Deployed | Yes|
-|Coalescing Events | No|
-|Store Event Payloads | Yes|
-|Log Source Identifier | <IP Address>|
-|TLS Listen Port | 6514|
-|Authentication Mode | TLS|
-|Server Certificate Type | Generated Certificate|
-|Max Payload Length | 4096|
-|Maximum Connections | 50|
-|TLS Protocols | TLS 1.2 and above|
-|Use as a Gateway Log Source | No|
-|Enable Multiline | Yes|
-|Aggregation Method | Start/End Matching|
-|Event Start Pattern | \< *(?<PRI>\d+) *\> *(?<VERSION>\d+)?|
-|Event End Pattern | |
-|Flatten Multiline Events Into Single Line | No|
-|Event Formatter | None|
+| Parameter | Value |
+|---|---|
+| Name | <name> @ <IP Address>|
+| Description | Self explanatory|
+| Enabled | Yes|
+| Log Source Type | McAfee ePolicy Orchestrator|
+| Protocol Type | TLS Syslog|
+| Groups | <define groups> |
+| Extension | |
+| Target Event Collector | <Local event collector>|
+| Disconnected Log Collector | |
+| Credibility | 5|
+| Internal | No|
+| Deployed | Yes|
+| Coalescing Events | No|
+| Store Event Payloads | Yes|
+| Log Source Identifier | <IP Address>|
+| TLS Listen Port | 6514|
+| Authentication Mode | TLS|
+| Server Certificate Type | Generated Certificate|
+| Max Payload Length | 4096|
+| Maximum Connections | 50|
+| TLS Protocols | TLS 1.2 and above|
+| Use as a Gateway Log Source | No|
+| Enable Multiline | Yes|
+| Aggregation Method | Start/End Matching|
+| Event Start Pattern | \< *(?<PRI>\d+) *\> *(?<VERSION>\d+)?|
+| Event End Pattern | |
+| Flatten Multiline Events Into Single Line | No|
+| Event Formatter | None|
 
 ## McAfee ePolicy Orchestrator (Trellix)
 1. Log in to the local McAfee ePO system as an administrator. 

@@ -8,21 +8,21 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
 
 | Parameter | Value |
 |---|---|
-| Name | <name> @ <IP Address>|
+| Name | (name) @ (IP Address)|
 | Description | Self explanatory|
 | Enabled | Yes|
 | Log Source Type | McAfee ePolicy Orchestrator|
 | Protocol Type | TLS Syslog|
-| Groups | <define groups> |
+| Groups | (define groups) |
 | Extension | |
-| Target Event Collector | <Local event collector>|
+| Target Event Collector | (Local event collector)|
 | Disconnected Log Collector | |
 | Credibility | 5|
 | Internal | No|
 | Deployed | Yes|
 | Coalescing Events | No|
 | Store Event Payloads | Yes|
-| Log Source Identifier | <IP Address>|
+| Log Source Identifier | (IP Address)|
 | TLS Listen Port | 6514|
 | Authentication Mode | TLS|
 | Server Certificate Type | Generated Certificate|
@@ -32,7 +32,7 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
 | Use as a Gateway Log Source | No|
 | Enable Multiline | Yes|
 | Aggregation Method | Start/End Matching|
-| Event Start Pattern | \< *(?<PRI>\d+) *\> *(?<VERSION>\d+)?|
+| Event Start Pattern | \< *(?\<PRI\>\d+) *\> *(?\<VERSION\>\d+)?|
 | Event End Pattern | |
 | Flatten Multiline Events Into Single Line | No|
 | Event Formatter | None|

@@ -46,7 +46,7 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
   Notes: Any additional notes
 ![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/5c054563-541b-4264-9ae9-9bc2d9e94543)
 4. Complete the remaining fields for the Syslog Server…
-  Server Name: Use the server name or IP address
+  Server Name: Use the server name or IP address (not my fake one)
   TCP port number: 6514
   Enable event forwarding: [X]
   Test: (Select Test Connection prior to saving to ensure connectivity)

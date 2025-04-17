@@ -1,44 +1,65 @@
-# McAfee ePO and TLS Syslog
-Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we can now leverage TLS-Syslog to relay messages in a much more concrete fashion. 
+## McAfee ePO and TLS Syslog Integration Guide
 
-## QRadar
-1. Log in to the QRadar SIEM, navigate to the Admin menu and open the Log Source Manager app.  
-2. Select Add Log Source and configure a new source with the following parameters.
-3. Once completed, ensure to deploy changes.
+Recent enhancements to the McAfee (Trellix) ePolicy Orchestrator (ePO) now allow for secure message relaying using TLS-Syslog. This guide outlines the steps to configure both IBM QRadar and McAfee ePO for TLS-encrypted syslog event forwarding.
 
-| Parameter | Value |
-|---|---|
-| Name | (name) @ (IP Address)|
-| Description | Self explanatory|
-| Enabled | Yes|
-| Log Source Type | McAfee ePolicy Orchestrator|
-| Protocol Type | Syslog (undocumented)|
-| Groups | (define groups) |
-| Extension | |
-| Target Event Collector | (Local event collector)|
-| Disconnected Log Collector | |
-| Credibility | 5|
-| Internal | No|
-| Deployed | Yes|
-| Coalescing Events | No|
-| Store Event Payloads | Yes|
-| Log Source Identifier | (IP Address)|
+---
 
-### Update
-As long as your deployment has an active TLS listener on 6514, this should work using standard syslog as the protocol. 
+## QRadar Configuration
 
-## McAfee ePolicy Orchestrator (Trellix)
-1. Log in to the local McAfee ePO system as an administrator. 
-2. Navigate to Settings > Configuration > Registered Servers
-3. Select New Server, complete the fields shown below and choose Next
-  Server Type: Syslog Server
-  Name: A memorable name for the connection
-  Notes: Any additional notes
-![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/5c054563-541b-4264-9ae9-9bc2d9e94543)
-4. Complete the remaining fields for the Syslog Server…
-  Server Name: Use the server name or IP address (not my fake one)
-  TCP port number: 6514
-  Enable event forwarding: [X]
-  Test: (Select Test Connection prior to saving to ensure connectivity)
-![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/63e064fc-8e97-479e-ad90-ce77f3f69962)
-5. Once saved, events should start streaming to QRadar quickly. Verify by viewing events associated with the log source.
+1. Log in to QRadar SIEM.
+2. Navigate to **Admin** > **Log Source Manager**.
+3. Click **Add Log Source** and configure the following parameters:
+
+| Parameter                  | Value                                  |
+|----------------------------|----------------------------------------|
+| Name                       | (name) @ (IP Address)                  |
+| Description                | (Describe the log source)              |
+| Enabled                    | Yes                                    |
+| Log Source Type            | McAfee ePolicy Orchestrator            |
+| Protocol Type              | Syslog (undocumented)                  |
+| Groups                     | (Assign relevant groups)               |
+| Extension                  | (Leave blank unless needed)            |
+| Target Event Collector     | (Local event collector)                |
+| Disconnected Log Collector | (Leave blank unless needed)            |
+| Credibility                | 5                                      |
+| Internal                   | No                                     |
+| Deployed                   | Yes                                    |
+| Coalescing Events          | No                                     |
+| Store Event Payloads       | Yes                                    |
+| Log Source Identifier      | (IP Address)                           |
+
+4. Deploy changes to apply the new log source.
+
+> **Note:** Ensure your QRadar deployment has an active TLS listener on port 6514. Standard syslog protocol will work as long as this listener is enabled.
+
+---
+
+## McAfee ePolicy Orchestrator (Trellix) Configuration
+
+1. Log in to the McAfee ePO console as an administrator.
+2. Go to **Settings** > **Configuration** > **Registered Servers**.
+3. Click **New Server** and enter the following:
+
+   - **Server Type:** Syslog Server  
+   - **Name:** (Choose a memorable name)  
+   - **Notes:** (Optional)
+
+   Syslog Server Setup
+
+4. Complete the remaining fields:
+
+   - **Server Name:** (QRadar server name or IP address)
+   - **TCP Port Number:** 6514
+   - **Enable Event Forwarding:** Checked
+   - **Test Connection:** Click to verify connectivity before saving
+
+   Syslog Server Fields
+
+5. Save the configuration. Events should begin streaming to QRadar promptly.  
+6. Verify event flow in QRadar by checking events associated with the new log source.
+
+---
+
+This setup ensures secure, reliable forwarding of McAfee ePO events to QRadar using TLS-encrypted syslog.
+
+Sources

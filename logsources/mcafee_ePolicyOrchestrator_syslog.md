@@ -62,4 +62,3 @@ Recent upgrades to the McAfee (Trellix) ePolicy Orchestrator (ePO) system now al
 **You’re all set!**  
 This configuration enables secure, TLS-encrypted syslog event forwarding from McAfee ePO to QRadar, ensuring both reliability and compliance.
 
-If you need further customization or have more images to include, let me know!

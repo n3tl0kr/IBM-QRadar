@@ -12,7 +12,7 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
 | Description | Self explanatory|
 | Enabled | Yes|
 | Log Source Type | McAfee ePolicy Orchestrator|
-| Protocol Type | TLS Syslog|
+| Protocol Type | Syslog (undocumented)|
 | Groups | (define groups) |
 | Extension | |
 | Target Event Collector | (Local event collector)|
@@ -23,19 +23,9 @@ Due to new improvements with the McAfee/Trelix ePolicy Orchestrator system, we c
 | Coalescing Events | No|
 | Store Event Payloads | Yes|
 | Log Source Identifier | (IP Address)|
-| TLS Listen Port | 6514|
-| Authentication Mode | TLS|
-| Server Certificate Type | Generated Certificate|
-| Max Payload Length | 4096|
-| Maximum Connections | 50|
-| TLS Protocols | TLS 1.2 and above|
-| Use as a Gateway Log Source | No|
-| Enable Multiline | Yes|
-| Aggregation Method | Start/End Matching|
-| Event Start Pattern | \< *(?\<PRI\>\d+) *\> *(?\<VERSION\>\d+)?|
-| Event End Pattern | |
-| Flatten Multiline Events Into Single Line | No|
-| Event Formatter | None|
+
+### Update
+As long as your deployment has an active TLS listener on 6514, this should work using standard syslog as the protocol. 
 
 ## McAfee ePolicy Orchestrator (Trellix)
 1. Log in to the local McAfee ePO system as an administrator. 

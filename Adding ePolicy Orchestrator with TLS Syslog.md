@@ -1,7 +1,3 @@
-Thank you for pointing that out! You’re right—your images are important for visual guidance and clarity. Here’s your cleaned-up guide, **including your images and improved formatting** for clarity and ease of use:
-
----
-
 ## McAfee ePO and TLS Syslog Integration
 
 Recent upgrades to the McAfee (Trellix) ePolicy Orchestrator (ePO) system now allow secure, reliable event forwarding to QRadar using TLS-Syslog. Follow these steps to configure both QRadar and ePO for this integration.

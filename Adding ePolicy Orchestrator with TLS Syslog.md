@@ -31,7 +31,6 @@ Recent upgrades to the McAfee (Trellix) ePolicy Orchestrator (ePO) system now al
 4. **Deploy changes** to activate the new log source.
 
 > **Note:** Ensure your QRadar deployment has an active TLS listener on port 6514. Standard syslog protocol will work as long as this listener is enabled.
-
 ---
 
 ## McAfee ePolicy Orchestrator (Trellix) Configuration
@@ -43,6 +42,7 @@ Recent upgrades to the McAfee (Trellix) ePolicy Orchestrator (ePO) system now al
    - **Name:** (A memorable name for the connection)
    - **Notes:** (Optional)
 
+   ![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/5c054563-541b-4264-9ae9-9bc2d9e94543)
    Registered Server Setup
 
 4. Complete the remaining fields:
@@ -51,6 +51,7 @@ Recent upgrades to the McAfee (Trellix) ePolicy Orchestrator (ePO) system now al
    - **Enable event forwarding:** ✔️
    - **Test:** Click **Test Connection** before saving to ensure connectivity.
 
+   ![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/63064fc-897-479e-ad90-ce77f3f69962)
    Syslog Server Fields
 
 5. **Save** your configuration. Events should begin streaming to QRadar shortly.

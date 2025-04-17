@@ -51,7 +51,7 @@ Recent upgrades to the McAfee (Trellix) ePolicy Orchestrator (ePO) system now al
    - **Enable event forwarding:** ✔️
    - **Test:** Click **Test Connection** before saving to ensure connectivity.
 
-   ![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/63064fc-897-479e-ad90-ce77f3f69962)
+   ![image](https://github.com/n3tl0kr/IBM-QRadar/assets/43141524/63e064fc-8e97-479e-ad90-ce77f3f69962)
    Syslog Server Fields
 
 5. **Save** your configuration. Events should begin streaming to QRadar shortly.
